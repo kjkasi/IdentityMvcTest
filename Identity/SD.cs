@@ -22,7 +22,7 @@ namespace Identity
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope> {
-                new ApiScope("Test", "Test Server"),
+                new ApiScope("test", "Test App"),
                 new ApiScope(name: "read",   displayName: "Read your data."),
                 new ApiScope(name: "write",  displayName: "Write your data."),
                 new ApiScope(name: "delete", displayName: "Delete your data.")
@@ -33,17 +33,17 @@ namespace Identity
         {
             new Client
             {
-                ClientId="mango",
+                ClientId="WebMvc",
                 ClientSecrets= { new Secret("secret".Sha256())},
                 AllowedGrantTypes = GrantTypes.Code,
-                RedirectUris={ "https://localhost:44378/signin-oidc" },
-                PostLogoutRedirectUris={"https://localhost:44378/signout-callback-oidc" },
+                RedirectUris={ "http://localhost:5000/signin-oidc" },
+                PostLogoutRedirectUris={"https://localhost:5000/signout-callback-oidc" },
                 AllowedScopes=new List<string>
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
                     IdentityServerConstants.StandardScopes.Email,
-                    "mango"
+                    "test"
                 }
             },
         };
