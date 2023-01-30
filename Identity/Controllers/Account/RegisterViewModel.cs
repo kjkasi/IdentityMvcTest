@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mango.Services.Identity.MainModule.Account
+namespace Identity.Controllers.Account
 {
     public class RegisterViewModel
     {

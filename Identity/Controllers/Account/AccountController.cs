@@ -18,8 +18,8 @@ using Duende.IdentityServer.Services;
 using Duende.IdentityServer.Stores;
 using Duende.IdentityServer.Test;
 using Microsoft.AspNetCore.Identity;
-using Mango.Services.Identity.Models;
-using Mango.Services.Identity.MainModule.Account;
+using Identity.Models;
+using Identity.Controllers.Account;
 using System.Collections.Generic;
 using System.Security.Claims;
 
@@ -34,8 +34,8 @@ namespace IdentityServerHost.Quickstart.UI
     [AllowAnonymous]
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IIdentityServerInteractionService _interaction;
         private readonly IClientStore _clientStore;
@@ -47,8 +47,8 @@ namespace IdentityServerHost.Quickstart.UI
             IClientStore clientStore,
             IAuthenticationSchemeProvider schemeProvider,
             IEventService events,
-            UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+            UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager,
             RoleManager<IdentityRole> roleInManager
             )
         {
@@ -236,7 +236,7 @@ namespace IdentityServerHost.Quickstart.UI
             if (ModelState.IsValid)
             {
 
-                var user = new ApplicationUser
+                var user = new AppUser
                 {
                     UserName = model.Username,
                     Email = model.Email,
