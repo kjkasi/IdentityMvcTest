@@ -1,9 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMvc", "WebMvc\WebMvc.csproj", "{80EA947E-7524-4400-B648-B5A715AFD757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{8462A865-F799-4527-A764-5D01DCC33737}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80EA947E-7524-4400-B648-B5A715AFD757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EA947E-7524-4400-B648-B5A715AFD757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EA947E-7524-4400-B648-B5A715AFD757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EA947E-7524-4400-B648-B5A715AFD757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8462A865-F799-4527-A764-5D01DCC33737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8462A865-F799-4527-A764-5D01DCC33737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8462A865-F799-4527-A764-5D01DCC33737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8462A865-F799-4527-A764-5D01DCC33737}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
